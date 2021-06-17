@@ -59,7 +59,20 @@ void EarleyParser::SCANNER(State s)
         chart.getContent()[j+1].push_back(temp);
     }
 }
-
+void EarleyParser::SCANNER(State s)
+{
+    State temp;	
+	int j = s.getIdx2();
+	int iterator = 0;
+	for(State i : chart[s.j])
+		if(i.[pointIdx] != al final) //el punto no esta al final 
+		{ 
+			temp.setIdx1(iterator);
+			temp.setIdx2(j);
+			chart.getContent()[j].push_back(temp);
+		}
+		iterator++;
+}
 void EarleyParser::setGrammar(std::string fileName)
 {
     this->grammar.readGrammarFromTXT(fileName);
